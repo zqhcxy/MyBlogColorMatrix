@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.zqh.myblogcolormatrix.SimpleMatrixActivity">
+
+    <ImageView
+        android:id="@+id/old_pic_iv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/tesetpic1" />
+
+    <ImageView
+        android:id="@+id/new_pic_iv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/old_pic_iv"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/tesetpic1" />
+
+    <Button
+        android:id="@+id/alpha_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_pic_iv"
+        android:layout_marginTop="20dp"
+        android:text="百分50透明度" />
+
+    <Button
+        android:id="@+id/single_clr_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alpha_btn"
+        android:layout_marginTop="10dp"
+        android:text="点击变化单通道颜色" />
+
+</RelativeLayout>
