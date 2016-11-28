@@ -39,4 +39,18 @@
         android:layout_marginTop="10dp"
         android:text="点击变化单通道颜色" />
 
+    <Button
+        android:id="@+id/saturation_clr_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/single_clr_btn"
+        android:layout_marginTop="10dp"
+        android:text="点击变化添加饱和度颜色" />
+    <Button
+        android:id="@+id/nativity_clr_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saturation_clr_btn"
+        android:layout_marginTop="10dp"
+        android:text="色彩的反转（底片效果）" />
 </RelativeLayout>

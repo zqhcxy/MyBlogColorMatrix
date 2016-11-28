@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SimpleMatrixActivity"></activity>
+        <activity android:name=".SimpleMatrixActivity" />
+        <activity android:name=".SaturationPictureActivity"></activity>
     </application>
 
 </manifest>
