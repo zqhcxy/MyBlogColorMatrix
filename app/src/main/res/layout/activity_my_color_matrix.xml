@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.zqh.myblogcolormatrix.MyColorMatrixActivity">
+
+    <ImageView
+        android:id="@+id/corMatrix_old_pic_iv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/tesetpic1" />
+
+    <ImageView
+        android:id="@+id/corMatrix_new_pic_iv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/corMatrix_old_pic_iv"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/tesetpic1" />
+
+    <RadioGroup
+        android:id="@+id/corMatrix_ragroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/corMatrix_new_pic_iv">
+
+        <RadioButton
+            android:id="@+id/corMatrix_saturation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="色彩的偏移（饱和度）" />
+
+        <RadioButton
+            android:id="@+id/corMatrix_lighteness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="色彩的缩放（亮度）" />
+
+        <RadioButton
+            android:id="@+id/corMatrix_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="色彩旋转（色相）" />
+    </RadioGroup>
+
+    <SeekBar
+        android:id="@+id/corMatrix_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/corMatrix_ragroup"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>

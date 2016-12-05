@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/new_pic_iv"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="百分50透明度" />
 
     <Button
@@ -36,7 +36,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/alpha_btn"
-        android:layout_marginTop="10dp"
         android:text="点击变化单通道颜色" />
 
     <Button
@@ -44,13 +43,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/single_clr_btn"
-        android:layout_marginTop="10dp"
         android:text="点击变化添加饱和度颜色" />
+
     <Button
         android:id="@+id/nativity_clr_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/saturation_clr_btn"
-        android:layout_marginTop="10dp"
         android:text="色彩的反转（底片效果）" />
+    <Button
+        android:id="@+id/lighteness_clr_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nativity_clr_btn"
+        android:text="色彩的缩放（亮度调整）" />
 </RelativeLayout>

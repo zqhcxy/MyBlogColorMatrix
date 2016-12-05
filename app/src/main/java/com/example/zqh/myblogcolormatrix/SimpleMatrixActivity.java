@@ -19,15 +19,17 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
 
     private ImageView old_pic_iv;
     private ImageView new_pic_iv;
-    private Button alpha_btn;
-    private Button single_clr_btn;
-    private Button saturation_clr_btn;
-    private Button nativity_clr_btn;
+    private Button alpha_btn;//透明度
+    private Button single_clr_btn;//单通道颜色
+    private Button saturation_clr_btn;//平移--饱和度
+    private Button nativity_clr_btn;//反转--底片效果
+    private Button lighteness_clr_btn;//缩放--亮度
 
     private Paint paint;
     private Canvas canvas;
-    private int singtype = 0;
-    private int saturationtype=0;
+    private int singtype = 0;//单通道颜色
+    private int saturationtype=0;//饱和度
+    private int lightenesstype=0;//亮度
 
 
     @Override
@@ -45,11 +47,13 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
         single_clr_btn = (Button) findViewById(R.id.single_clr_btn);
         saturation_clr_btn = (Button) findViewById(R.id.saturation_clr_btn);
         nativity_clr_btn=(Button)findViewById(R.id.nativity_clr_btn);
+        lighteness_clr_btn=(Button)findViewById(R.id.lighteness_clr_btn);
 
         alpha_btn.setOnClickListener(this);
         single_clr_btn.setOnClickListener(this);
         saturation_clr_btn.setOnClickListener(this);
         nativity_clr_btn.setOnClickListener(this);
+        lighteness_clr_btn.setOnClickListener(this);
 
         paint = new Paint();
     }
@@ -57,10 +61,10 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.alpha_btn:
+            case R.id.alpha_btn://透明度
                 new_pic_iv.setImageBitmap(getAlphaPic());
                 break;
-            case R.id.single_clr_btn:
+            case R.id.single_clr_btn://单通道
                 new_pic_iv.setImageBitmap(getSingleColorPic(singtype));
                 if (singtype < 3) {
                     singtype++;
@@ -68,7 +72,7 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
                     singtype = 0;
                 }
                 break;
-            case R.id.saturation_clr_btn:
+            case R.id.saturation_clr_btn://饱和度
                 new_pic_iv.setImageBitmap(getSaturationPic(50,saturationtype));
                 if (saturationtype < 3) {
                     saturationtype++;
@@ -76,8 +80,16 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
                     saturationtype = 0;
                 }
                 break;
-            case R.id.nativity_clr_btn:
+            case R.id.nativity_clr_btn://底片
                 new_pic_iv.setImageBitmap(getNegativePic());
+                break;
+            case R.id.lighteness_clr_btn:// 亮度
+                new_pic_iv.setImageBitmap(getlightteness(lightenesstype));
+                if (lightenesstype < 3) {
+                    lightenesstype++;
+                } else {
+                    lightenesstype = 0;
+                }
                 break;
 
         }
@@ -151,7 +163,7 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
 
 
     /**
-     * 饱和度
+     * 平移--饱和度
      *
      * @param value
      * @return
@@ -198,6 +210,10 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
     }
 
 
+    /**
+     * 反转，底片效果
+     * @return
+     */
     private Bitmap getNegativePic() {
         Bitmap mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.tesetpic1);
         Bitmap bmp = mBitmap.copy(Bitmap.Config.ARGB_8888, true);
@@ -207,6 +223,28 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
                 0, -1, 0, 0, 255,
                 0, 0, -1, 0, 255,
                 0, 0, 0, 1, 0,
+        });
+        Paint paint = new Paint();
+        paint.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
+        Canvas canvas = new Canvas(bmp);
+        canvas.drawBitmap(bmp, 0, 0, paint);
+        return bmp;
+    }
+
+    /**
+     * 缩放--亮度
+     * @return
+     */
+    private Bitmap getlightteness(int value){
+        lighteness_clr_btn.setText("点击变化亮度颜色倍数(当前："+value+"倍)");
+        Bitmap mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.tesetpic1);
+        Bitmap bmp = mBitmap.copy(Bitmap.Config.ARGB_8888, true);
+        //生成颜色矩阵，倍数变化亮度
+        ColorMatrix colorMatrix = new ColorMatrix(new float[]{
+                value, 0, 0, 0, 0,
+                0, value, 0, 0, 0,
+                0, 0, value, 0, 0,
+                0, 0, 0, value, 0,
         });
         Paint paint = new Paint();
         paint.setColorFilter(new ColorMatrixColorFilter(colorMatrix));

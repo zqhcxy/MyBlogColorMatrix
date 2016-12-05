@@ -12,6 +12,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button crmatrix_simple_btn;
+    private Button crmatrix_simple2_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         crmatrix_simple_btn = (Button) findViewById(R.id.crmatrix_simple_btn);
+        crmatrix_simple2_btn=(Button)findViewById(R.id.crmatrix_simple2_btn);
 
 
         crmatrix_simple_btn.setOnClickListener(this);
+        crmatrix_simple2_btn.setOnClickListener(this);
     }
 
     @Override
@@ -34,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.crmatrix_simple_btn:
                 Intent intent=new Intent(MainActivity.this,SimpleMatrixActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.crmatrix_simple2_btn:
+                Intent intent1=new Intent(MainActivity.this,MyColorMatrixActivity.class);
+                startActivity(intent1);
                 break;
         }
     }

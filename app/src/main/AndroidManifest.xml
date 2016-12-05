@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SimpleMatrixActivity" />
-        <activity android:name=".SaturationPictureActivity"></activity>
+        <activity android:name=".SaturationPictureActivity" />
+        <activity android:name=".MyColorMatrixActivity"></activity>
     </application>
 
 </manifest>

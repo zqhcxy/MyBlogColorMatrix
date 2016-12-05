@@ -13,5 +13,12 @@
         android:id="@+id/crmatrix_simple_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="简单图片编辑" />
+        android:text="简单图片编辑1" />
+    <Button
+        android:id="@+id/crmatrix_simple2_btn"
+        android:layout_below="@id/crmatrix_simple_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/colorMatrix" />
 </RelativeLayout>
