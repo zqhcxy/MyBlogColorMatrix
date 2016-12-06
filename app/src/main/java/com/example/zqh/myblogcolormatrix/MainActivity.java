@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 /**
- * 图片的颜色矩阵对图片进行编辑
+ * 图片的颜色矩阵对图片的滤镜效果
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

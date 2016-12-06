@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 /**
- * 改变图片的透明度和单通道颜色
+ * 改变图片的透明度、单通道颜色、饱和度、饱和度、饱和度
  */
 public class SimpleMatrixActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,8 +22,8 @@ public class SimpleMatrixActivity extends AppCompatActivity implements View.OnCl
     private Button alpha_btn;//透明度
     private Button single_clr_btn;//单通道颜色
     private Button saturation_clr_btn;//平移--饱和度
-    private Button nativity_clr_btn;//反转--底片效果
-    private Button lighteness_clr_btn;//缩放--亮度
+    private Button nativity_clr_btn;//反转--饱和度
+    private Button lighteness_clr_btn;//缩放--饱和度
 
     private Paint paint;
     private Canvas canvas;

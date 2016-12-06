@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 /**
- * ColorMatrixde 色相改变
+ * ColorMatrixde 的简单应用2--黑白效果、反色、怀旧
  */
 public class SimpleMaxtrixActivity2 extends AppCompatActivity implements View.OnClickListener {
 

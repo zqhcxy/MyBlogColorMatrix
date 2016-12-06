@@ -14,7 +14,7 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 
 /**
- * 使用ColorMatrix实现图片的多种效果
+ * 使用ColorMatrix实现图片的多种滤镜效果
  */
 public class MyColorMatrixActivity extends AppCompatActivity {
 
