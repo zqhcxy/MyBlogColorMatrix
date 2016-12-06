@@ -111,3 +111,7 @@ private Bitmap handleStaturationColorMatrixBmp(int progress) {
         return mTempBmp;
     }
 ```
+##就不上效果图片了，图片太大。。
+
+  [参考的大神博客](http://blog.csdn.net/harvic880925/article/details/51187277)
+  [我的博客](http://blog.csdn.net/zqhcxy "目前没什么内容，以后会渐渐完善")
