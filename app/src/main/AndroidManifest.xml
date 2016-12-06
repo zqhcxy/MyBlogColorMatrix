@@ -15,9 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SimpleMatrixActivity" />
-        <activity android:name=".SaturationPictureActivity" />
-        <activity android:name=".MyColorMatrixActivity"></activity>
+        <activity android:name=".SimpleMatrixActivity"
+            android:configChanges="orientation|keyboardHidden|locale|screenSize"/>
+        <activity android:name=".SimpleMaxtrixActivity2"
+            android:configChanges="orientation|keyboardHidden|locale|screenSize"/>
+        <activity android:name=".MyColorMatrixActivity"
+            android:configChanges="orientation|keyboardHidden|locale|screenSize"></activity>
     </application>
 
 </manifest>

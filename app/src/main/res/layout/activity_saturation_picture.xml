@@ -7,29 +7,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.zqh.myblogcolormatrix.SaturationPictureActivity">
-
-    <Button
-        android:id="@+id/saturation_change_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="改变改变饱和度的通道" />
-
-    <SeekBar
-        android:id="@+id/saturation_seeckbar"
-        android:layout_below="@+id/saturation_change_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:max="360"/>
+    tools:context=".SimpleMaxtrixActivity2">
 
     <ImageView
-        android:id="@+id/saturation_pic_iv"
+        android:id="@+id/old_pic_iv"
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/saturation_seeckbar"
-        android:layout_height="300dp"
-        android:src="@drawable/tesetpic1" />
+        android:layout_height="100dp"
+        android:src="@drawable/testpic2" />
+
+    <ImageView
+        android:id="@+id/new_pic_iv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/old_pic_iv"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/testpic2" />
+
+    <Button
+        android:id="@+id/blackWhite_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_pic_iv"
+        android:layout_marginTop="10dp"
+        android:text="黑白效果" />
+
+    <Button
+        android:id="@+id/nostalgia_clr_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blackWhite_btn"
+        android:text="怀旧效果" />
+    <Button
+        android:id="@+id/inverse_clr_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nostalgia_clr_btn"
+        android:text="反色效果" />
 
 
 </RelativeLayout>

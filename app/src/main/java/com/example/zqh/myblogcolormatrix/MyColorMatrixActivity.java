@@ -190,4 +190,15 @@ public class MyColorMatrixActivity extends AppCompatActivity {
         // 返回新的位图，也即调色处理后的图片
         return mTempBmp;
     }
+
+    @Override
+    protected void onDestroy() {
+        if(mOriginBmp!=null){
+            mOriginBmp.recycle();
+        }
+        if(mTempBmp!=null){
+            mTempBmp.recycle();
+        }
+        super.onDestroy();
+    }
 }

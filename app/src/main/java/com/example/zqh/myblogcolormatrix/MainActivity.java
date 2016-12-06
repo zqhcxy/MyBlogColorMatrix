@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button crmatrix_simple_btn;
     private Button crmatrix_simple2_btn;
+    private Button crmatrix_simple3_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         crmatrix_simple_btn = (Button) findViewById(R.id.crmatrix_simple_btn);
         crmatrix_simple2_btn=(Button)findViewById(R.id.crmatrix_simple2_btn);
-
+        crmatrix_simple3_btn=(Button)findViewById(R.id.crmatrix_simple3_btn);
 
         crmatrix_simple_btn.setOnClickListener(this);
         crmatrix_simple2_btn.setOnClickListener(this);
+        crmatrix_simple3_btn.setOnClickListener(this);
     }
 
     @Override
@@ -39,8 +41,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.crmatrix_simple2_btn:
-                Intent intent1=new Intent(MainActivity.this,MyColorMatrixActivity.class);
+                Intent intent1=new Intent(MainActivity.this,SimpleMaxtrixActivity2.class);
                 startActivity(intent1);
+                break;
+            case R.id.crmatrix_simple3_btn:
+                Intent intent2=new Intent(MainActivity.this,MyColorMatrixActivity.class);
+                startActivity(intent2);
                 break;
         }
     }
